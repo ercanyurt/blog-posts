@@ -5,7 +5,7 @@ const {randomBytes} =require('crypto');
 const app =  express();
 app.use(bodyParser.json());
 
-
+/* initail project phase we keep posts in memory (array) */ 
 const posts = {};
 
 app.get('/posts',(req,res)=>{
@@ -20,7 +20,7 @@ app.post('/posts',(req,res)=>{
     };
     res.status(201).send(posts[id]);
 });
-
+// port number :  4000 
 app.listen(4000,()=>{
     console.log("started listening on port 4000");
 });
