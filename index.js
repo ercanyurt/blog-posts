@@ -5,7 +5,7 @@ const {randomBytes} =require('crypto');
 const app =  express();
 app.use(bodyParser.json());
 
-/* initail project phase we keep posts in memory (array) */ 
+/* initial project phase we keep posts in memory (array) */ 
 const posts = {};
 
 app.get('/posts',(req,res)=>{
